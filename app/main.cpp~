@@ -1,0 +1,17 @@
+#include "Board.hpp"
+#include <iostream>
+
+
+
+int main()
+{
+  unsigned int row;
+  unsigned int column;
+  std::out << "Please specify how many rows you want: ";
+  std::cin >> row;
+  std::endl;
+  std::out << "Please specify how many columns you want: ";
+  std::cin >> column;
+  std::endl;
+  return 0;
+}

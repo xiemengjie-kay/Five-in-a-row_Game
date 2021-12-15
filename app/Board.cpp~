@@ -1,0 +1,23 @@
+#include "Board.hpp"
+#include <sstream>
+
+
+std::string Board::get_current_board()
+{
+  std::ostringstream out;
+  // unsigned int numDigits = (dynamic_cast<std::string> (row)).size(); 
+  for (unsigned int i = 0; i <= column; i++)
+    {
+      out << i << " ";
+    }
+  for (unsigned int i = 0; i <= row; i++)
+    {
+      out << i << " ";
+      for (unsigned int j = 1; j <= column; j++)
+	{
+	  out << "* ";
+	}
+    }
+
+  return out.str();
+}

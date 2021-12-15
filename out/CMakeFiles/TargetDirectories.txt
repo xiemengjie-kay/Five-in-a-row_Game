@@ -1,0 +1,5 @@
+/home/ics45c/projects/five_in_a_row/out/CMakeFiles/rebuild_cache.dir
+/home/ics45c/projects/five_in_a_row/out/CMakeFiles/a.out.gtest.dir
+/home/ics45c/projects/five_in_a_row/out/CMakeFiles/a.out.exp.dir
+/home/ics45c/projects/five_in_a_row/out/CMakeFiles/edit_cache.dir
+/home/ics45c/projects/five_in_a_row/out/CMakeFiles/a.out.app.dir
