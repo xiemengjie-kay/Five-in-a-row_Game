@@ -4,5 +4,6 @@
 CMakeFiles/a.out.exp.dir/app/Board.cpp.o
  /home/ics45c/projects/five_in_a_row/app/Board.cpp
  /home/ics45c/projects/five_in_a_row/app/Board.hpp
+ /home/ics45c/projects/five_in_a_row/app/InvalidInput.hpp
 CMakeFiles/a.out.exp.dir/exp/expmain.cpp.o
  /home/ics45c/projects/five_in_a_row/exp/expmain.cpp

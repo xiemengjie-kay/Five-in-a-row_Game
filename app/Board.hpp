@@ -12,16 +12,17 @@ public:
 
   ~Board() noexcept  = default;
 
-  unsigned int get_row(){ return row;}
+  unsigned int get_row() const { return row;}
 
-  unsigned int get_column(){ return column;};
+  unsigned int get_column() const { return column;};
 
-  std::string get_current_board();
+  std::string get_current_board() const;
+
+  void drop(unsigned int row, unsigned int column, const std::string& piece);
   
 private:
   unsigned int row;
   unsigned int column;
-
   std::vector<std::vector<std::string>> board;
 
 };

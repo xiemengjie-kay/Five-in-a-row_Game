@@ -3,6 +3,7 @@
 
 CMakeFiles/a.out.exp.dir/app/Board.cpp.o: ../app/Board.cpp
 CMakeFiles/a.out.exp.dir/app/Board.cpp.o: ../app/Board.hpp
+CMakeFiles/a.out.exp.dir/app/Board.cpp.o: ../app/InvalidInput.hpp
 
 CMakeFiles/a.out.exp.dir/exp/expmain.cpp.o: ../exp/expmain.cpp
 

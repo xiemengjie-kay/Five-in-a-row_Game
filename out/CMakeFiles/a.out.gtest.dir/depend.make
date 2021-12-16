@@ -3,6 +3,7 @@
 
 CMakeFiles/a.out.gtest.dir/app/Board.cpp.o: ../app/Board.cpp
 CMakeFiles/a.out.gtest.dir/app/Board.cpp.o: ../app/Board.hpp
+CMakeFiles/a.out.gtest.dir/app/Board.cpp.o: ../app/InvalidInput.hpp
 
 CMakeFiles/a.out.gtest.dir/gtest/gtestmain.cpp.o: ../gtest/gtestmain.cpp
 

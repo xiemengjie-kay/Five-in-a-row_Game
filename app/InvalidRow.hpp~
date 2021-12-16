@@ -1,0 +1,11 @@
+#ifndef INVALIDROW_HPP
+#define INVALIDROW_HPP
+
+
+class InvalidRow
+{
+}
+
+
+
+#endif

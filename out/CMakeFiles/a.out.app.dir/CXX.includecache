@@ -6,15 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/ics45c/projects/five_in_a_row/app/Board.cpp
-Board.hpp
-/home/ics45c/projects/five_in_a_row/app/Board.hpp
-sstream
--
-
 /home/ics45c/projects/five_in_a_row/app/Board.hpp
 string
 -
 vector
 -
+
+/home/ics45c/projects/five_in_a_row/app/InvalidInput.hpp
+
+/home/ics45c/projects/five_in_a_row/app/main.cpp
+Board.hpp
+/home/ics45c/projects/five_in_a_row/app/Board.hpp
+iostream
+-
+InvalidInput.hpp
+/home/ics45c/projects/five_in_a_row/app/InvalidInput.hpp
 
