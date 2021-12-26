@@ -23,6 +23,7 @@ int main()
   unsigned int row;
   unsigned int column;
   bool flag = true;
+  // specify the number of rows of the game board
   while (flag)
     {
       std::cout << "Please specify how many rows you want:";
@@ -38,6 +39,7 @@ int main()
 	}
     }
   flag = true;
+  // specify the number of columns of the game board
   while (flag)
     {
       std::cout << "Please specify how many columns you want:";

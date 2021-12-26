@@ -77,9 +77,15 @@ void Board::drop(unsigned int row, unsigned int column,
 {
   check_row(row, this->row);
   check_column(column, this->column);
-  board[row][column] = piece;
-  // TODO: check if the user entered position already exist
-  // if already exist, throw InvalidIput from here.
+  // check if the position is already occupied
+  if (board[row][column] == "*")
+  {
+    board[row][column] = piece;
+  }
+  else
+  {
+    throw InvalidInput{};
+  }
 }
 
 

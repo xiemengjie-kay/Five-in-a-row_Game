@@ -1,3 +1,14 @@
+/* 
+This file contains the class Board that will be the model of the game.
+By creating an Board class object, you can use the member functions of
+Board to control the current game board such as dropping a piece, 
+printing the current game board, etc..
+
+Author: Mengjie Xie
+*/
+
+
+
 #ifndef BOARD_HPP
 #define BOARD_HPP
 
