@@ -27,6 +27,42 @@ namespace
 	throw InvalidInput{};
       }
   }
+  
+  /*
+  winH() returns a bool value that indicates whether the piece has five in
+  a horizontal line. True means there are. False means there aren't.
+  
+  @param boardPtr a pointer that points to the first element of the 
+         2-D vector board.
+  @param piece the piece you want to check.
+  @param col the number of columns of the game board
+
+  @return bool
+  */
+  bool winH(const std::vector<std::vector<std::string>>* boardPtr, 
+            const std::string& piece, unsigned int col)
+  {
+    for (auto v : *boardPtr)
+    {
+        unsigned int count = 0;
+        for (unsigned int i = 1; i <= col; i++)
+        {
+            if (v[i] == piece)
+            {
+                count++;
+                if (count == 5)
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                count = 0;
+            }
+        }
+    }
+    return false;
+  }
 }
 
 
@@ -89,5 +125,13 @@ void Board::drop(unsigned int row, unsigned int column,
 }
 
 
+bool Board::win(const std::string& piece) const
+{
+    // check the horizontal
+    bool h = winH(&board, piece, column);
 
-// TODO: check if the game is over.
+    // check the vertical
+    // check the right diagonal
+    // check the left diagonal
+    return h;
+}

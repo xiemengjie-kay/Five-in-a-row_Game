@@ -82,6 +82,10 @@ int main()
 	}
       std::cout << board.get_current_board();
       // TODO: after player1 does an action, check if player 1 wins
+      if (board.win("O")) 
+      {
+        std::cout << "Player1 wins! Game Over." << std::endl;
+      }
       bool player2 = true;
       while (player2)
 	{
@@ -100,6 +104,10 @@ int main()
 	}
       std::cout << board.get_current_board();
       // TODO: after player2 does an action, check if player2 wins
+      if (board.win("X"))
+      {
+        std::cout << "Player2 wins! Game Over." << std::endl;
+      }
     }
 
   return 0;

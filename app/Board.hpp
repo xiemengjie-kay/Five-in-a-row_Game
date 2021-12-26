@@ -31,6 +31,15 @@ public:
 
   void drop(unsigned int row, unsigned int column, const std::string& piece);
   
+  // win() returns a bool to indicate whether the entered piece has five in
+  // a row. True means there are five in a row, which means the player who
+  // drops the piece wins. False means otherwise.
+  // 
+  // @param: piece the piece you want to check
+  // 
+  // @return bool
+  bool win(const std::string& piece) const; 
+
 private:
   unsigned int row;
   unsigned int column;

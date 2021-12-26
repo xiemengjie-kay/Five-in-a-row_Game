@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ics45c/projects/five_in_a_row/app/Board.cpp
-Board.hpp
-/home/ics45c/projects/five_in_a_row/app/Board.hpp
-sstream
--
-iomanip
--
-InvalidInput.hpp
-/home/ics45c/projects/five_in_a_row/app/InvalidInput.hpp
-
 /home/ics45c/projects/five_in_a_row/app/Board.hpp
 string
 -
