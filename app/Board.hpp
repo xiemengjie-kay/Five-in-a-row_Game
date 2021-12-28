@@ -21,7 +21,7 @@ class Board
 public:
   Board(unsigned int row, unsigned int column);
 
-  ~Board() noexcept  = default;
+  ~Board() noexcept = default;
 
   unsigned int get_row() const { return row;}
 

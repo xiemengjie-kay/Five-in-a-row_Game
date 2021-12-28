@@ -162,7 +162,7 @@ Board::Board(unsigned int row, unsigned int column)
       v.push_back(std::to_string(i));
       for (unsigned int j = 1; j <= column; j++)
 	{
-	  v.push_back("*");
+	  v.push_back(".");
 	}
       v.push_back("\n");
       board.push_back(v);
@@ -191,7 +191,7 @@ void Board::drop(unsigned int row, unsigned int column,
   check_row(row, this->row);
   check_column(column, this->column);
   // check if the position is already occupied
-  if (board[row][column] == "*")
+  if (board[row][column] == ".")
   {
     board[row][column] = piece;
   }
