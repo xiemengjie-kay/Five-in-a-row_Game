@@ -63,6 +63,83 @@ namespace
     }
     return false;
   }
+
+
+  /*
+  winV() returns a bool value that indicates whether the piece has five in
+  a vertical line. True means there are. False means there aren't.
+  */
+  bool winV(const std::vector<std::vector<std::string>>* boardPtr, 
+            const std::string& piece, unsigned int col)
+  {
+    for (unsigned int i = 1; i <= col; i++)
+      {
+	unsigned int count = 0;
+	for (auto v : *boardPtr)
+	  {
+	    if (v[i] == piece)
+	      {
+		count++;
+		if (count == 5)
+		  {
+		    return true;
+		  }
+	      }
+	    else
+	      {
+		count = 0;
+	      }
+	  }
+      }
+    return false;
+  }
+
+  /*
+  winLeftD() returns a bool value that indicates whether the piece has five in
+  a left diagonal line. True means there are. False means there aren't.
+  */
+  bool winLeftD(const std::vector<std::vector<std::string>>& board, 
+		const std::string& piece, unsigned int row, unsigned int col)
+  {
+    // loop through the rows that need to be checked (1 ~ row-4)
+    for (unsigned int i = 1; i <= row - 4; i++)
+      {
+	// loop through the column that needs to be checked (1 ~ col-4)
+	for (unsigned int j = 1; i <= col - 4; j++)
+	  {
+	    if (board[i][j] == piece && board[i+1][j+1] == piece &&
+		board[i+2][j+2] == piece && board[i+3][j+3] == piece &&
+		board[i+4][j+4] == piece)
+	      {
+		// five in a row
+		return true;
+	      }
+	  }
+      }
+    return false;
+  }
+
+  /*
+  winRightD() returns a bool value that indicates whether the piece has five in
+  a right diagonal line. True means there are. False means there aren't.
+  */
+  bool winRightD(const std::vector<std::vector<std::string>>& board, 
+		const std::string& piece, unsigned int row, unsigned int col)
+  {
+    for (unsigned int i = 1; i <= row - 4; i++)
+      {
+	for (unsigned int j = col; i >= 5; j--)
+	  {
+	    if (board[i][j] == piece && board[i+1][j-1] == piece &&
+		board[i+2][j-2] == piece && board[i+3][j-3] == piece &&
+		board[i+4][j-4] == piece)
+	      {
+		return true;
+	      }
+	  }
+      }
+    return false;
+  }
 }
 
 
@@ -131,7 +208,13 @@ bool Board::win(const std::string& piece) const
     bool h = winH(&board, piece, column);
 
     // check the vertical
+    bool v = winV(&board, piece, column);
+    
     // check the right diagonal
+    bool lD = winLeftD(board, piece, row, column);
+    
     // check the left diagonal
-    return h;
+    bool rD = winRightD(board, piece, row, column);
+    
+    return h or v or lD or rD;
 }

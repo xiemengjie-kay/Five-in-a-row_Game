@@ -65,7 +65,7 @@ int main()
   while (!gameOver)
     {
       bool player1 = true;
-      while (player1)
+      while (player1 && !gameOver)
 	{
 	  std::cout << "Turn to player 1, please input the position ";
 	  std::cout << "(row column):";
@@ -85,9 +85,10 @@ int main()
       if (board.win("O")) 
       {
         std::cout << "Player1 wins! Game Over." << std::endl;
+	gameOver = true;
       }
       bool player2 = true;
-      while (player2)
+      while (player2 && !gameOver)
 	{
 	  std::cout << "Turn to Player2, please input the position ";
 	  std::cout << "(row column)";
@@ -107,6 +108,7 @@ int main()
       if (board.win("X"))
       {
         std::cout << "Player2 wins! Game Over." << std::endl;
+	gameOver = true;
       }
     }
 
