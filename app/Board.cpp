@@ -105,7 +105,7 @@ namespace
     for (unsigned int i = 1; i <= row - 4; i++)
       {
 	// loop through the column that needs to be checked (1 ~ col-4)
-	for (unsigned int j = 1; i <= col - 4; j++)
+	for (unsigned int j = 1; j <= col - 4; j++)
 	  {
 	    if (board[i][j] == piece && board[i+1][j+1] == piece &&
 		board[i+2][j+2] == piece && board[i+3][j+3] == piece &&
@@ -128,7 +128,7 @@ namespace
   {
     for (unsigned int i = 1; i <= row - 4; i++)
       {
-	for (unsigned int j = col; i >= 5; j--)
+	for (unsigned int j = col; j >= 5; j--)
 	  {
 	    if (board[i][j] == piece && board[i+1][j-1] == piece &&
 		board[i+2][j-2] == piece && board[i+3][j-3] == piece &&

@@ -79,9 +79,9 @@ int main()
 	    {
 	      std::cout << "Invalid position." << std::endl;
 	    }
+	  std::cout << board.get_current_board();
 	}
-      std::cout << board.get_current_board();
-      // TODO: after player1 does an action, check if player 1 wins
+      // check if player 1 wins
       if (board.win("O")) 
       {
         std::cout << "Player1 wins! Game Over." << std::endl;
@@ -102,9 +102,9 @@ int main()
 	    {
 	      std::cout << "Invalid position." << std::endl;
 	    }
+	  std::cout << board.get_current_board();
 	}
-      std::cout << board.get_current_board();
-      // TODO: after player2 does an action, check if player2 wins
+      // check if player2 wins
       if (board.win("X"))
       {
         std::cout << "Player2 wins! Game Over." << std::endl;
